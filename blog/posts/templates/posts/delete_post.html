@@ -1,0 +1,12 @@
+{% extends 'posts/main.html' %}
+{% load static %}
+
+
+{% block content %}
+<h4>Are you sure you eant to delete the post?</h4>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" name="DELETE">
+    </form>
+{% endblock content %}
+    

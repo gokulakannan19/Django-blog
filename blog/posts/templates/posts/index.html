@@ -3,6 +3,9 @@
 
 {% block content %}
 
+<div class="add-post">
+  <a href="{% url 'create-post' %}" class="btn btn-info">Add post</a>
+</div>
 {% for post in posts %}
         
 <div class="card">
@@ -14,6 +17,8 @@
       <p class="card-text">{{post.created_at}}</p>
       <p class="card-text">{{post.body|truncatewords:20}}</p>
       <a href="{% url 'post' post.id %}" class="btn btn-primary">Read More</a>
+      <a href="{% url 'update-post' post.id %}" class="btn btn-info">Update Post</a>
+      <a href="{% url 'delete-post' post.id %}" class="btn btn-danger">Delete Post</a>
     </div>
   </div>
 

@@ -1,0 +1,13 @@
+{% extends 'posts/main.html' %}
+{% load static %}
+
+
+{% block content %}
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="Submit Post">
+    </form>
+{% endblock content %}
+    

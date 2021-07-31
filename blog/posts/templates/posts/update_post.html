@@ -1,0 +1,14 @@
+{% extends 'posts/main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="Update post">
+</form>
+    
+{% endblock content %}
+    
