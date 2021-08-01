@@ -3,8 +3,11 @@
 
 
 {% block content %}
-    <h3>
-        Login page
-    </h3>
+    <form action="" method="post"> 
+        {% csrf_token %}
+        <input type="text" name="username" id="username">
+        <input type="password" name="password" id="password">
+        <input type="submit" value="login" name=login>
+    </form>
     
 {% endblock content %}
