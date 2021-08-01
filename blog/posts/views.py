@@ -3,6 +3,21 @@ from .models import Post
 from .forms import PostForm
 
 
+def register_page(request):
+    context = {}
+    return render(request, 'posts/register_page.html', context)
+
+
+def login_page(request):
+    context = {}
+    return render(request, 'posts/login_page.html', context)
+
+
+def logout_page(request):
+    context = {}
+    return render(request, 'posts/logout_page.html', context)
+
+
 def index(request):
     posts = Post.objects.all().order_by('created_at',)[::-1]
     context = {
