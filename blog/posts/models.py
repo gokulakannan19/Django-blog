@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 
 
 class Blogger(models.Model):
-    user = models.OneToOneField(
-        User, null=True, blank=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null=True)
     email = models.CharField(max_length=50, null=True)
     phone = models.CharField(max_length=10, null=True)
